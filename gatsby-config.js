@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(`PROCESS ENV: `, process.env)
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + WordPress Starter',
@@ -17,8 +23,8 @@ module.exports = {
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: false,
         auth: {
-          htaccess_user: process.env.USER,
-          htaccess_pass: process.env.PASSWORD,
+          htaccess_user: process.env.HTACCESS_USER,
+          htaccess_pass: process.env.HTACCESS_PASSWORD,
           htaccess_sendImmediately: false
         },
         // Set to true to debug endpoints on 'gatsby build'
