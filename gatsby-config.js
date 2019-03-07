@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + WordPress Starter',
+    title: 'Lorena Ledezma',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -27,7 +27,9 @@ module.exports = {
         },
         // Set to true to debug endpoints on 'gatsby build'
         verboseOutput: true,
-        excludedRoutes: ["**/themes"],
+        includedRoutes: [
+          "**/pages"
+        ],
       },
     },
     'gatsby-plugin-sharp',
