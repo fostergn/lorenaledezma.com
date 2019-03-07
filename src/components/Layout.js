@@ -1,12 +1,11 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-
 import Navbar from './Navbar'
-import './all.sass'
+import '../styles/global.css'
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet title="Home | Gatsby + WordPress" />
+    <Helmet title="Lorena Ledezma | Fashion" />
     <Navbar />
     <div>{children}</div>
   </div>

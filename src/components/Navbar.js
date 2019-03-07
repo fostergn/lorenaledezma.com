@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
+import '../styles/nav.css'
 
 const Navbar = () => (
   <StaticQuery
@@ -16,24 +17,22 @@ const Navbar = () => (
       }
     `}
     render={data => (
-      <nav className="navbar is-transparent">
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item">Lorena Ledezma</Link>
-          </div>
-          <div className="navbar-end">
-            {data.allWordpressPage.edges
-                .filter(({ node }) => node.slug !== `homepage` )
-                .map(edge => (
-                <Link
-                  className="navbar-item"
-                  to={edge.node.slug}
-                  key={edge.node.slug}
-                >
-                  {edge.node.title}
-                </Link>
-              ))}
-          </div>
+      <nav>
+        <div>
+          <Link to="/">Lorena Ledezma</Link>
+        </div>
+        <div>
+          {data.allWordpressPage.edges
+            .filter(({ node }) => node.slug !== `homepage` )
+            .map(edge => (
+            <Link
+              className="navbar-item"
+              to={edge.node.slug}
+              key={edge.node.slug}
+            >
+              {edge.node.title}
+            </Link>
+            ))}
         </div>
       </nav>
     )}

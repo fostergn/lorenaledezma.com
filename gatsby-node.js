@@ -1,7 +1,6 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const { paginate } = require('gatsby-awesome-pagination')
 
 const getOnlyPublished = edges =>
   _.filter(edges, ({ node }) => node.status === 'publish')
@@ -28,12 +27,6 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
 
-    const pageTemplate = path.resolve(`./src/templates/page.js`)
-
-    // Only publish pages with a `status === 'publish'` in production. This
-    // excludes drafts, future posts, etc. They will appear in development,
-    // but not in a production build.
-
     const allPages = result.data.allWordpressPage.edges
     const pages =
       process.env.NODE_ENV === 'production'
@@ -44,6 +37,8 @@ exports.createPages = ({ actions, graphql }) => {
     _.each(pages, ({ node: page }) => {
 
       const pagePath = page.slug === `homepage` ? `/` : `/${page.slug}/`
+
+      const pageTemplate = path.resolve(`./src/templates/${page.slug}.js`)
 
       createPage({
         path: pagePath,
