@@ -20,7 +20,6 @@ module.exports = {
         protocol: 'https',
         // Use 'Advanced Custom Fields' Wordpress plugin
         useACF: true,
-        auth: {},
         // Set to true to debug endpoints on 'gatsby build'
         verboseOutput: true,
         includedRoutes: [
