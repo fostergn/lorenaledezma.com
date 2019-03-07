@@ -1,0 +1,9 @@
+.contact__wrapper {}
+
+.contact__label {
+  font-weight: 300;
+  margin-right: 10px;
+  color: #aaa;
+}
+
+.contact__value {}
