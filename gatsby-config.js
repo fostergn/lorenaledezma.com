@@ -2,8 +2,6 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-console.log(`PROCESS ENV: `, process.env)
-
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + WordPress Starter',
@@ -21,7 +19,7 @@ module.exports = {
         // The protocol. This can be http or https.
         protocol: 'https',
         // Use 'Advanced Custom Fields' Wordpress plugin
-        useACF: false,
+        useACF: true,
         auth: {
           htaccess_user: process.env.HTACCESS_USER,
           htaccess_pass: process.env.HTACCESS_PASSWORD,
