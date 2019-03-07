@@ -1,8 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,700');
+
 body {
+  margin: 0;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
   margin: 0;
 }
 
 a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+  color: #444;
+}
+
+.body {
+  padding: 10px;
 }

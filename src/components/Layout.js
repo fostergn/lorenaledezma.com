@@ -4,11 +4,11 @@ import Navbar from './Navbar'
 import '../styles/global.css'
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <main>
     <Helmet title="Lorena Ledezma | Fashion" />
     <Navbar />
-    <div>{children}</div>
-  </div>
+    <div className="body">{children}</div>
+  </main>
 )
 
 export default TemplateWrapper

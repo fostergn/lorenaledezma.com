@@ -18,9 +18,9 @@ const Navbar = () => (
     `}
     render={data => (
       <nav>
-        <div>
+        <h1>
           <Link to="/">Lorena Ledezma</Link>
-        </div>
+        </h1>
         <div>
           {data.allWordpressPage.edges
             .filter(({ node }) => node.slug !== `homepage` )
