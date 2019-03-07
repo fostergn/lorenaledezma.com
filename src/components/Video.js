@@ -11,19 +11,16 @@ const Video = ({ url }) => (
       height='100%'
       controls={false}
       config={{
-        vimeo: {
-          preload: true,
-          playerOptions: {
-            background: false
-          }
+        preload: true,
+        playerOptions: {
+          title: 0,
+          sidedock: 0,
+          controls: 0,
         },
-        youtube: {
-          preload: true,
-          playerVars: {
-            showinfo: 0,
-            controls: 0,
-            modestBranding: 0
-          }
+        playerVars: {
+          showinfo: 0,
+          controls: 0,
+          modestBranding: 0
         },
       }}
     />
