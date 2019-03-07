@@ -33,3 +33,15 @@ a:hover {
 .body {
   padding: 10px;
 }
+
+.fullscreen {
+  height: calc(100vh - 72px);
+}
+
+.flex-center {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

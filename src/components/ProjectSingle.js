@@ -9,8 +9,8 @@ const ProjectSingle = ({ name, date, description, image, external_image_url, vid
   return (
     <div className="project__wrapper">
       <article className="project__description">
-        <div>{name}</div>
-        <div>{date}</div>
+        <p>{name}</p>
+        <p>{date}</p>
       </article>
       {asset}
     </div>

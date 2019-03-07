@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import '../styles/contact.css'
 
 const Page = ({ data }) => {
 
@@ -11,8 +12,20 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      email: {email}
-      phone: {phone}
+      <div className="fullscreen">
+        <article className="flex-center">
+          <section className="contact__wrapper">
+            <p>
+              <span className="contact__label">e:</span>
+              <span className="contact__value">{email}</span>
+            </p>
+            <p>
+              <span className="contact__label">c:</span>
+              <span className="contact__value">{phone}</span>
+            </p>
+          </section>
+        </article>
+      </div>
     </Layout>
   )
 }
