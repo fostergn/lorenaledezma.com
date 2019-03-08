@@ -30,9 +30,9 @@ const ProjectSingle = ({ name, date, description, image, video }) => {
   return (
     <div className={wrapperClasses}>
       <article className="project__description">
-        <p>{name}</p>
-        <p>{date}</p>
-        <p>{description}</p>
+        <p class="title">{name}</p>
+        <p class="sub-info">{date}</p>
+        <p class="sub-info">{description}</p>
       </article>
       {VideoAsset}
       {ImageAsset}
