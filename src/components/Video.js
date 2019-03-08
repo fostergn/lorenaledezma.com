@@ -2,7 +2,27 @@ import React from 'react'
 import '../styles/video.css'
 import ReactPlayer from 'react-player'
 
-const Video = ({ url }) => (
+const videoConfig = {
+  controls: false,
+  vimeo: {
+    preload: true,
+    playerOptions: {
+      sidedock: false,
+      controls: false,
+      title: false,
+      byline: false
+    }
+  },
+  youtube: {
+    preload: true,
+    embedOptions: {
+      controls: 0,
+      modestBranding: 0
+    }
+  }
+};
+
+const Video = ({ url, handleVideoChange }) => (
   <div className='player-wrapper'>
     <ReactPlayer
       className='react-player'
@@ -10,19 +30,12 @@ const Video = ({ url }) => (
       width='100%'
       height='100%'
       controls={false}
-      config={{
-        preload: true,
-        playerOptions: {
-          title: 0,
-          sidedock: 0,
-          controls: 0,
-        },
-        playerVars: {
-          showinfo: 0,
-          controls: 0,
-          modestBranding: 0
-        },
-      }}
+      config={videoConfig}
+      onStart={() => handleVideoChange(true)}
+      onPlay={() => handleVideoChange(true)}
+      onPause={() => handleVideoChange(false)}
+      onError={() => handleVideoChange(false)}
+      onEnded={() => handleVideoChange(false)}
     />
   </div>
 )

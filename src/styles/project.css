@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   flex-direction:column;
-  z-index: 10;
+  z-index: 20;
   pointer-events: none;
 }
 
@@ -22,12 +22,20 @@
   margin: 3px;
 }
 
-.project__wrapper.__project--play:hover .project__description {
+.project__wrapper:hover .project__description {
+  opacity: 1;
+  background-color: rgba(0,0,0, .6)
+}
+
+.project__wrapper--playing .image__wrapper--overlay {
+  opacity: 0;
+}
+
+.project__wrapper--playing:hover .project__description {
   opacity: 0;
   background-color: rgba(0,0,0, 0)
 }
 
-.project__wrapper:hover .project__description {
-  opacity: 1;
-  background-color: rgba(0,0,0, .6)
+.project__wrapper--playing .project__description {
+  opacity: 0;
 }

@@ -5,11 +5,12 @@ body {
   font-family: 'IBM Plex Serif', serif;
   color:#fff;
   background-color:#000;
-}
-
-body {
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+}
+
+#___gatsby {
+  overflow:hidden;
 }
 
 body::-webkit-scrollbar {

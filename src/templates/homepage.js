@@ -16,8 +16,7 @@ const Page = ({ data }) => {
       name={project.name}
       date={project.date}
       description={project.description}
-      image={project.image}
-      external_image_url={project.external_image_url}
+      image={project.local_image}
       video={project.video}
     />)
   )
@@ -40,12 +39,19 @@ export const pageQuery = graphql`
     wordpressPage(id: { eq: $id }) {
       acf {
         projects {
-          name,
-          date,
-          description,
-          image,
-          external_image_url,
+          name
+          date
+          description
           video
+          local_image {
+            localFile {
+              childImageSharp {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
         }
       }
     }
