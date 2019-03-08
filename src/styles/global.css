@@ -16,6 +16,10 @@
   font-weight: 200;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Alieron', serif;
@@ -49,7 +53,7 @@ a:hover {
 }
 
 .body {
-  padding: 0px;
+  padding: 0px 20px;
 }
 
 .fullscreen {
