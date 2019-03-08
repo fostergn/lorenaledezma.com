@@ -3,6 +3,7 @@
   cursor: pointer;
   max-height: calc(100vh - 52px);
   margin-bottom: 20px;
+  overflow:hidden;
 }
 
 .project__description {
